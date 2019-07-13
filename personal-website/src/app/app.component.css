@@ -4,4 +4,29 @@ body, html {
     height: 100%;
     color: #777;
     line-height: 1.8;
-  }
+    display: block;
+}
+
+.nav-bar {
+    width: 100%;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.nav-button {
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    outline: 0;
+}
+
+.right {
+    float: right;
+}
+
+.nav-button:hover {
+    background-color: #ccc;
+}
