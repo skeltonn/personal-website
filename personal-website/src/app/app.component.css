@@ -30,3 +30,13 @@ body, html {
 .nav-button:hover {
     background-color: #ccc;
 }
+
+.primary-image {
+    background-image: url("https://www.doi.gov/sites/doi.gov/files/blog-post/thumbnail-images/ZionNPTomMorrisSmall.jpg");
+    min-height: 70%;
+    opacity: 50%;
+}
+
+.top{position:fixed;width:100%;z-index:1; top:0;}
+.shadow{box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)}
+.animate-top{position:relative;animation:animatetop 0.4s}@keyframes animatetop{from{top:-300px;opacity:0} to{top:0;opacity:1}}
