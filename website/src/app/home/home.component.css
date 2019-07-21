@@ -1,10 +1,7 @@
 
 .home-pic-div {
     height: 500px;
+    margin-bottom: -1px;
     text-align: center;
     background: url("https://www.nps.gov/common/uploads/banner_image/imr/homepage/0047D4F0-1DD8-B71B-0B56566586F793FA.jpg") no-repeat center;
-}
-
-.home-card {
-    width: 200px;
 }
