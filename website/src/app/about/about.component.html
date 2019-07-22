@@ -4,7 +4,7 @@
     <span style="flex: 1 1 auto"></span>
 </mat-toolbar>
 
-<div style="text-align: center">
+<div style="text-align: center; max-width: 1000px; margin: auto">
 
     <p>Sometimes I do things:</p>
 
@@ -19,9 +19,18 @@
     <p>Probably a headshot here. Maybe funny qualities.</p>
     <p>I like to think im good at some things:</p>
 
-    <div style="display: table">
-        <p style="display: table-cell">Photography</p>
-        <mat-progress-bar style="display: table-cell; width: 300px" mode="determinate" value="40"></mat-progress-bar>
-    </div>
+    <mat-card>
+        <mat-list>
+            <h3 mat-subheader>Skills</h3>
+            <mat-list-item *ngFor="let skill of skills">
+                <p style="flex: 30%; text-align: left">{{skill.name}}</p>
+                <p style="flex: 10%; text-align: left">{{skill.value}}%</p>
+                <mat-progress-bar style="min-height: 20px" mode="determinate" value="{{skill.value}}">
+                </mat-progress-bar>
+            </mat-list-item>
+        </mat-list>
+    </mat-card>
+
+    <p></p>
 
 </div>
