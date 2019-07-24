@@ -13,6 +13,7 @@ import { AboutComponent } from './about/about.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
 import { SectionHeaderComponent } from './section-header/section-header.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SectionHeaderComponent } from './section-header/section-header.componen
     AboutComponent,
     PortfolioComponent,
     ContactComponent,
-    SectionHeaderComponent
+    SectionHeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
