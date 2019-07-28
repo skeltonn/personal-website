@@ -5,6 +5,27 @@
 	<p>Here is some of my work.</p>
 	<p>Atleast what i'm proud of. Maybe.</p>
 
+	<mat-form-field appearance="standard" style="width: 100%">
+		<mat-label>Filter Projects</mat-label>
+		<mat-chip-list #chipList>
+			<mat-chip *ngFor="let chip of chips" [selectable]="selectable" [removable]="removable"
+				(removed)="remove(chip)">
+				{{chip}}
+				<mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+			</mat-chip>
+			<input #chipInput [formControl]="chipCtrl" [matAutocomplete]="auto" [matChipInputFor]="chipList"
+				[matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"
+				(matChipInputTokenEnd)="add($event)">
+		</mat-chip-list>
+		<mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+			<mat-option *ngFor="let chip of filteredChips | async" [value]="chip">
+				{{chip}}
+			</mat-option>
+		</mat-autocomplete>
+	</mat-form-field>
+
+	<p></p>
+
 	<mat-grid-list cols="3" rowHeight="2:3" gutterSize="10px">
 		<mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows">
 			<mat-card class="dashboard-card">
@@ -13,7 +34,10 @@
 				</mat-card-header>
 				<img mat-card-image src={{tile.image}}>
 				<mat-card-content>
-					{{tile.text}}
+					<mat-chip-list>
+						<mat-chip *ngFor="let chip of tile.chips">{{chip}}</mat-chip>
+					</mat-chip-list>
+					<p>{{tile.text}}</p>
 				</mat-card-content>
 				<mat-card-actions>
 					<button mat-button>GITHUB</button>
