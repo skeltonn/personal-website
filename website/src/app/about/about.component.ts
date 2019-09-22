@@ -15,9 +15,9 @@ export class AboutComponent implements OnInit {
   skills: Skill[] = [
     {name: "Java", value: 70},
     {name: "C#", value: 60},
+    {name: "Javascript", value: 30},
     {name: "Python", value: 70},
     {name: "UI Design", value: 80},
-    {name: "Javascript", value: 30},
     {name: "SQL", value: 30},
     {name: "C++", value: 60},
     {name: "Gaming", value: 50},
