@@ -13,10 +13,17 @@ export interface Skill {
 export class AboutComponent implements OnInit {
 
   skills: Skill[] = [
-    {name: "Programming", value: 60},
-    {name: "Listening", value: -1},
+    {name: "Java", value: 70},
+    {name: "C#", value: 60},
+    {name: "Python", value: 70},
+    {name: "UI Design", value: 80},
+    {name: "Javascript", value: 30},
+    {name: "SQL", value: 30},
+    {name: "C++", value: 60},
+    {name: "Gaming", value: 50},
     {name: "Photography", value: 30},
-    {name: "Being Antisocial", value: 80},
+    {name: "Sports", value: 20},
+    {name: "Cooking", value: 40}
 
   ]
 
