@@ -7,13 +7,13 @@ import {map, startWith} from 'rxjs/operators';
 import { Title } from '@angular/platform-browser';
 
 export interface Tile {
-  color: string;
   cols: number;
   rows: number;
   text: string;
   title: string;
   image: string;
   chips: Array<string>;
+  link: string;
 }
 
 
@@ -39,13 +39,13 @@ export class PortfolioComponent implements OnInit {
 
 
   allTiles: Tile[] = [
-    {title: 'Swatched', text: 'One', cols: 1, rows: 1, color: 'lightblue', image: 'https://material.angular.io/assets/img/examples/shiba2.jpg', chips: ["Android", "Java", "Material"]},
-    {title: 'Pattonville App', text: 'Three', cols: 1, rows: 1, color: 'lightpink', image: 'https://material.angular.io/assets/img/examples/shiba2.jpg', chips: ["Android", "Java", "Material"]},
-    {title: 'Flood++', text: 'Two', cols: 2, rows: 2, color: 'lightgreen', image: 'https://material.angular.io/assets/img/examples/shiba2.jpg', chips: ["Android", "Java", "Material"]},
-    {title: 'Garden', text: 'Four', cols: 1, rows: 1, color: 'lightyellow', image: 'https://material.angular.io/assets/img/examples/shiba2.jpg', chips: ["Python", "Raspberry Pi"]},
-    {title: 'Rover Engagement Display', text: 'Four', cols: 1, rows: 1, color: 'lightyellow', image: 'https://material.angular.io/assets/img/examples/shiba2.jpg', chips: ["C#", "WPF"]},
-    {title: 'Rover Autonomy', text: 'Four', cols: 1, rows: 1, color: 'lightyellow', image: 'https://material.angular.io/assets/img/examples/shiba2.jpg', chips: ["Python", "OpenCV"]},
-    {title: 'Personal Website', text: 'Four', cols: 1, rows: 1, color: 'lightyellow', image: 'https://material.angular.io/assets/img/examples/shiba2.jpg', chips: ["Angular", "Material"]}
+    {title: 'MRDT: Rover Engagement Display', text: 'The operations control system for the Mars Rover Design Team, which drives the rover for all tasks with developement focused on user experience and functionality of the rover', cols: 2, rows: 2, image: 'assets/projects/basestation.JPG', chips: ["C#", "WPF"], link: "https://github.com/MissouriMRDT/BaseStation_Software/"},
+    {title: 'Swatched', text: 'A mobile app designed to assist artists and web designers develop and save color palettes easily', cols: 1, rows: 2, image: 'assets/projects/swatched.png', chips: ["Android", "Java", "Material"], link: "https://play.google.com/store/apps/details?id=io.abstractappinnovations.swatched"},
+    {title: 'Pattonville App', text: 'A group project with 3 other Android developers to create an app to support our school district\'s communication needs', cols: 1, rows: 2, image: 'assets/projects/psd.png', chips: ["Android", "Java", "Material"], link: "https://play.google.com/store/apps/details?id=org.pattonvillecs.pattonvilleapp"},
+    {title: 'MRDT: Autonomy', text: 'The autonomous program the Mars Rover Design Team uses in the Autonomy task of the University Rover Challenge', cols: 2, rows: 2, image: 'assets/projects/autonomy.JPG', chips: ["Python", "OpenCV"], link: "https://github.com/MissouriMRDT/Autonomy_Software"},
+    {title: 'Flood++', text: 'A mobile game that utilizes Swatched palettes where players flood a game board with a single color', cols: 1, rows: 2, image: 'assets/projects/flood++.png', chips: ["Android", "Java", "Material"], link: "https://play.google.com/store/apps/details?id=io.abstractappinnovations.flood"},
+    {title: 'Garden', text: 'A python project to be run on a RPi to make gardens smart through automated watering', cols: 1, rows: 2, image: 'assets/projects/garden.jpeg', chips: ["Python", "Raspberry Pi"], link: "https://github.com/skeltonn/Garden"},
+    {title: 'Personal Website', text: 'A website to display projects like this one, and a platform for future web ideas', cols: 1, rows: 2, image: 'assets/projects/website.png', chips: ["Angular", "Material"], link: "https://github.com/skeltonn/personal-website"}
   ]
   tiles: Tile[] = [];
 
